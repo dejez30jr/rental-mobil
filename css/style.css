@@ -514,6 +514,7 @@ body {
   }
   .detail{
     gap: 10px;
+    justify-content: center;
     display: flex;
   }
   .detail h3{
@@ -540,6 +541,7 @@ body {
   /* why-us */
   .why-us {
     flex-direction: column;
+    padding: 15px 25px 0px;
   }
 
   .why-us .text h1 {
