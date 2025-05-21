@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental jakarta</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    /* ini navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 50px;
+        z-index: 1000;
+        width: 100%;
+        position: fixed;
+        border-bottom: 1px solid rgb(237, 237, 237);
+        background: #f4f4f4;
+    }
+
+    .logo {
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    #kontak {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transform: skew(-20deg);
+        padding: 10px;
+        background-color: #000;
+        font-size: 20px;
+    }
+
+    /* Hamburger (disembunyikan di desktop) */
+    .hamburger {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: #f4f4f4;
+            flex-direction: column;
+            width: 100%;
+            display: none;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .navbar {
+            padding: 15px;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <!-- ini navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="" width="100" style="border-radius: 20px;">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#why">Kenapa Memilih Kami?</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="https:wa.me//+62 852-1632-1234" id="kontak">Kontak</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>RENTAL MOBIL
+                JAKARTA
+                MOBIL + DRIVER</h1>
+            <p>Discover Our Story. A Passion For Providing Reliable Car Rentals.</p>
+            <a href="#" class="btn">Rent Now</a>
+            <br>
+            <br>
+            <br>
+            <div class="detail">
+                <div>
+                    <h3 class="count" data-target="4">0</h3>
+                    <p>Car</p>
+                </div>
+                <div class="garis">|</div>
+                <div>
+                    <h3 class="count" data-target="50" data-plus="true">0</h3>
+                    <p>Client</p>
+                </div>
+                <div class="garis">|</div>
+                <div>
+                    <h3 class="count" data-target="100" data-plus="true">0</h3>
+                    <p>Good Review</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/carhero.png" alt="Luxury Car" />
+        </div>
+    </section>
+
+    <!-- why section -->
+    <section class="why-us" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000" id="why">
+        <img src="assets/DETAIL.png" alt="Classic Cars" />
+        <div class="text">
+            <h1>Mengapa Memilih Kami?</h1>
+            <p>Kami memiliki pengalaman sejak tahun 2018 dalam melayani
+                kebutuhan perjalanan customer kami, dengan driver
+                berpengalaman, ramah dan friendly.</p>
+            <a href="#" class="btn">Rent a Car</a>
+        </div>
+    </section>
+
+
+    <!-- section motto -->
+    <section class="section-motto">
+        <div class="box-motto">
+            <img src="assets/mott.png" alt="">
+            <h1>Harga Bersahabat</h1>
+            <b>"Moto kami adalah harga minimal pelayanan maximal"</b>
+            <p>yaps sesuai moto kami, kami terus menjaga & mengontrol agar moto kami bisa tetap berjalan</p>
+        </div>
+    </section>
+
+    <!-- menu mobil -->
+    <section class="car-price-section" data-aos="fade-up" data-aos-duration="3000" id="menu">
+        <div class="judul-section">
+            <h1>Pilihan dan Harga Mobil</h1>
+        </div>
+        <div class="car-slider">
+            <div class="car-card" data-title="Honda BRV" data-ket1="1 HARI (08.00-19.00 JAM) JABODETABEK
+" data-ket2="DI LUAR TOL, BENSIN & MAKAN
+" data-ket3="Rp 700.000.00">
+                <img src="assets/honda_brv-removebg-preview.png" alt="Avanza">
+                <h3>Honda BRV </h3>
+                <button class="btn-detail">Sewa Sekarang</button>
+            </div>
+            <div class="car-card" data-title="Toyota avansa" data-ket1="1 HARI (08.00-19.00 JAM) JABODETABEK
+" data-ket2="DI LUAR TOL, BENSIN & MAKAN" data-ket3="Rp 600.000.00">
+                <img src="assets/toyota_avansa-removebg-preview.png" alt="Brio">
+                <h3>Toyota avansa</h3>
+                <button class="btn-detail">Lihat detail</button>
+            </div>
+            <div class="car-card" data-title="Toyota calya" data-ket1="1 HARI (08.00-19.00 JAM) JABODETABEK
+" data-ket2="DI LUAR TOL, BENSIN & MAKAN" data-ket3="Rp 500.000.00">
+                <img src="assets/toyota_calya-removebg-preview.png" alt="Brio">
+                <h3>Toyota calya</h3>
+                <button class="btn-detail">Lihat detail</button>
+            </div>
+            <div class="car-card" data-title="Honda Brio" data-ket1="Bensin, Matic" data-ket2="5 Kursi"
+                data-ket3="Rp 250.000">
+                <img src="assets/Toyota_inova_-removebg-preview.png" alt="Brio">
+                <h3>Toyota Inova</h3>
+                <button class="btn-detail">Lihat detail</button>
+            </div>
+        </div>
+        <div class="slider-buttons">
+            <button id="prevBtn"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <button id="nextBtn"><i class="fa-solid fa-circle-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Popup Detail -->
+    <div class="popup" id="popupDetail">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 id="popupTitle">Judul Mobil</h2>
+            <ul>
+                <li id="popupKet1">Keterangan 1</li>
+                <li id="popupKet2">Keterangan 2</li>
+                <li id="popupKet3">Keterangan 3</li>
+                <li>PERMINTAAN DI LUAR HARGA KAMI, BISA NEGOSIASI LANGSUNG DENGAN ADMIN KAMI YA</li>
+            </ul>
+            <button class="btn-detail">
+                <a href="https://wa.link/2gtwh1" style="text-decoration: none; color: white;">Sewa sekarang</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2 class="logo">Hanzmanagement Rental Mobil</h2>
+                <p>Rental mobil jakarta + driver.</p>
+            </div>
+
+            <div class="footer-links">
+                <div>
+                    <h4>Alamat</h4>
+                    <ul>
+                        <li><a href="#">Komp.tegal lonceng indah no 2A, marga jaya</a></li>
+                        <li>Kota bogor,bogor barat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>About servic</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Testimony</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.link/2gtwh1">Contact Us</a></li>
+                        <li><a href="#">Office Location</a></li>
+                        <li><a href="#">Privacy & Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; dejez30 Copyright 2025. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" /></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" /></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/mian.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

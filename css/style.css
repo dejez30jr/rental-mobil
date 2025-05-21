@@ -1,0 +1,547 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #111;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HERO section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6rem 1rem 1rem;
+  background: #f4f4f4;
+  border-radius: 0px 0px 20px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 1.5rem;
+  animation: content 1s forwards;
+  transition: transform 0.3s ease;
+}
+
+@keyframes content {
+  0% {
+    transform: scale(0.8);
+  }
+}
+
+.hero-content h1 {
+  font-family: "Boldonse", system-ui;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  transform: skew(-20deg);
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  animation: hero 1s forwards;
+  transition: transform 2s ease;
+}
+
+@keyframes hero {
+  0% {
+    transform: translateX(200px);
+  }
+}
+
+.brands,
+.why-us,
+.pick-car,
+.offer,
+.vehicle-types {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.brand-logos img {
+  max-height: 40px;
+  margin: 0 1rem;
+}
+
+.hero-content .detail{
+  display: flex;
+  gap: 20px;
+}
+.detail h3{
+  font-size: 40px;
+}
+.detail div{
+  text-align: center;
+  padding: 10px;
+}
+.detail .garis{
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+
+/* sec motto */
+.section-motto {
+  display: flex;
+  justify-content: center;
+  margin-top: -3%;
+}
+
+.box-motto {
+  opacity: 0;
+  /* transform: scale(0.3); */
+  /* awalnya kecil */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 10px 20px 10px;
+  font-size: 20px;
+  color: white;
+  background-color: #000;
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.2),
+    /* bayangan utama bawah */
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    /* bayangan lebih dalam */
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  /* garis halus tepi */
+  width: 80%;
+  border-radius: 20px;
+  margin-top: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.box-motto img{
+  margin-top: -10%;
+}
+
+.box-motto.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.box-motto h1 {
+  font-size: 30px;
+  font-family: "Boldonse", system-ui;
+}
+
+/* WHY section */
+.why-us {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.why-us .image img {
+  width: 300px;
+  height: 300px;
+}
+
+.why-us .text {
+  padding-top: 30px;
+  text-align: start;
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+.why-us .text h1 {
+  font-size: 40px;
+  font-family: "Boldonse", system-ui;
+}
+
+.why-us .text .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  transform: skew(20deg);
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Section */
+.car-price-section {
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 5%;
+  width: 100%;
+}
+
+.judul-section {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Boldonse", system-ui;
+}
+
+.car-slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.car-card {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.car-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.car-card img.animate-img {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+
+.car-card img:hover {
+  transform: scale(1.1) translate(-15px, -15px) translateX(-80px);
+}
+
+/* @keyframes car {
+  0%{
+    transform: scale(0.5);
+  }
+} */
+
+.car-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.btn-detail {
+  padding: 10px 20px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Slider Button */
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  padding: 10px 5% 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-buttons button {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  max-width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+}
+
+.popup-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.popup-content li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-detail {
+    width: 100%;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
+}
+
+
+/* footer */
+.footer {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  background: rgb(26, 26, 26);
+  padding: 40px 20px;
+  font-family: sans-serif;
+  color: white;
+  border-top: 1px solid #eee;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  margin: auto;
+}
+
+.footer-brand {
+  width: fit-content;
+}
+
+.footer-brand h2.logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  flex: 1 1 200px;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.footer-links div {}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* all sction */
+  section {
+    padding: 0px 10px 0px;
+  }
+
+  /* hero */
+  .hero {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 25px;
+  }
+
+  .hero img {
+    animation: hero 1s forwards;
+  }
+
+  @keyframes hero {
+    0% {
+      transform: translateY(-200px);
+    }
+  }
+  .detail h3{
+    font-size: 20px;
+  }
+  .detail div{
+    font-size: 17px;
+  }
+
+  /* motto */
+  .box-motto h1 {
+    font-size: 25px;
+  }
+  .box-motto img {
+    margin-top: -11%;
+  }
+  .box-motto {
+    font-size: 17px;   
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* why-us */
+  .why-us {
+    flex-direction: column;
+  }
+
+  .why-us .text h1 {
+    font-size: 25px;
+  }
+
+  .why-us .text {
+    font-size: 17px;
+  }
+
+  /* car-price-section */
+  .car-price-section .judul-section {
+    font-size: 20px;
+  }
+}
