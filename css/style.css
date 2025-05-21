@@ -8,6 +8,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
+
   color: #111;
 }
 
@@ -491,6 +492,11 @@ body {
   .hero {
     flex-wrap: wrap-reverse;
     text-align: center;
+    padding:  25% 10px 10px;
+  }
+
+  .hero-content{
+    padding: 10px;
   }
 
   .hero-content h1 {
@@ -505,6 +511,10 @@ body {
     0% {
       transform: translateY(-200px);
     }
+  }
+  .detail{
+    gap: 10px;
+    display: flex;
   }
   .detail h3{
     font-size: 20px;
